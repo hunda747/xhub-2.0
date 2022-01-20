@@ -84,8 +84,15 @@
   			<div class="card-body">
   			  <h5 class="card-title">Special title treatment</h5>
   			  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  			  <a href="#" class="btn btn-primary">Call for an Interview</a>
-  			  <a href="#" class="btn btn-primary">Reject</a>
+					<form action="/tableviewDetail/interview" method="post">
+						<button type="submit" class="btn btn-outline-primary">Call for an Interview</button>
+						<input type="hidden" name="email" value={{request.0.email}}>
+					</form>
+					<form action="/tableviewDetail/reject" method="post">
+						<button type="submit" class="btn btn-outline-primary">Reject</button>
+						<input type="hidden" name="email" value={{request.0.email}}>
+					</form>
+					
   			</div>
 			</div>
     </div>

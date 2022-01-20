@@ -12,6 +12,23 @@ const New_register = require('../models/new_register');
 
 dotenv.config({path:'../.env'});
 
+exports.changeStatusInterview = async (req,res, next) => {
+	console.log('in change interbiew');
+	const email = req.body.email;
+	console.log(email);
+	await New_register.changeStatus('Interview', email);
+	console.log('server lodded');
+	const [result, metaData] = await New_register.fetchAll();
+	console.log(result);
+	res.render('tableview', {requests: result, name: 'try'});
+}
+
+exports.changeStatusRejected = async (req,res, next) => {
+	const email = req.body.email;
+	await New_register.changeStatus('reject', email);
+	this.getNewRegister;
+}
+
 exports.getNewRegister = async (req, res,next) => {
 	try{
 		const [result, metaData] = await New_register.fetchAll();

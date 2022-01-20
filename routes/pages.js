@@ -38,4 +38,7 @@ router.get("/tableview/:email", adminController.getNewRegisterDetail);
 //     res.render("tableview")
 // })
 
+router.post("/tableviewDetail/reject", adminController.changeStatusRejected);
+router.post("/tableviewDetail/interview", adminController.changeStatusInterview);
+
 module.exports = router;

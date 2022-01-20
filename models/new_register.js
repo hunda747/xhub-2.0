@@ -17,7 +17,7 @@ module.exports = class Request {
 
  save(){
 		try{
-			db.execute('INSERT INTO (enterpreneur_fullName,email,phone_number,business_name,business_address,business_partener1,business_partener2,business_partener3,description,business_description,business_solution,business_support,business_stage) VALUES (?,?,?,?,?,?,?,?,?,?,?)',
+			db.execute('INSERT INTO (enterpreneur_fullName,email,phone_number,business_name,business_address,business_partener1,business_partener2,business_partener3,description,business_description,business_solution,business_support,business_stage) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',
 			 [this.enterpreneur_fullName,
 				this.email,
 				this.phone_number,
@@ -30,7 +30,8 @@ module.exports = class Request {
 				this.business_description,
 				this.business_solution ,
 				this.business_support,
-				this.business_stage]);
+				this.business_stage,
+				'new']);
 		}catch(error){
 			console.log('new registor: '+ error);
 		}
@@ -44,7 +45,27 @@ module.exports = class Request {
 		return db.execute('SELECT * FROM new_registers');
 	}
 
+	static fetchNewRegistered(){
+		return db.execute('SELECT * FROM new_registers WHERE status = ?', 'new');
+	}
+
+	static fetchInterview(){
+		return db.execute('SELECT * FROM new_registers WHERE status = ?', 'Interview');
+	}
+
+	static fetchResult(){
+		return db.execute('SELECT * FROM new_registers WHERE status = ?', 'reject');
+	}
+
  static checkEmail(email){
 	return db.execute('SELECT * FROM new_registers WHERE new_registers.email = ?', [email]);
  }
+
+	static changeStatus(status, email){
+		try{
+			return db.execute('UPDATE new_registers SET status = ? WHERE (email = ?)', [status, email]);
+		}catch(error){
+			console.log('synsdlfjalfj: ' + error);
+		}
+	}
 }
