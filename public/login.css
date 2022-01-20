@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.row{
+    background: transparent;
+    border-radius: 20px;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    padding: 0px;
+    margin-top: 60px; 
+    
+}
+img{
+    margin-top: 30px;
+}
+.login-btn{
+    border: none;
+    outline: none;
+    background-color: rgb(99, 214, 243);
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold; 
+}
+.login-btn:hover{
+    background: white;
+    color: rgb(98, 198, 231);
+}
+.forget-password{
+    text-decoration: none;
+    font-style: italic;
+}
+#email , #password{
+    width: 100%;
+    height: 30px;
+    border:none;
+    border-bottom: 2px solid black;
+}
+#email:hover,#password:hover{
+    border: solid 1px rgb(47, 222, 245);
+    transition:ease-in;
+    transition-delay: 0ms;
+}
+
+/* animation css */
+/* 
+.container{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+}
+.container .ring{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -20px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid rgb(114, 194, 231);
+    animation: animate 4s linear infinite;
+    z-index: -10;
+
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container .ring::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    height: 15px;
+    background: #24ecff;
+    box-shadow: 0 0 0 5px #24ecff33,
+    0 0 0 8px #24ecff22,
+    0 0 0 10px #24ecff11,
+    0 0 0 15px #24ecff;
+}
+
+.container .ring:nth-child(3){
+    position: absolute;
+    top: -60px;
+   
+} */
+
+
+

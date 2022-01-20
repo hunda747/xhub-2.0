@@ -1,0 +1,12 @@
+.img-holder{
+    overflow: hidden;
+  }
+  .card:hover{
+    border-block: 200rem;
+    
+  }
+  .card-img-top:hover{
+    transform: scale(1.2);
+    transition: all 0.4s ease-out;
+   
+  }

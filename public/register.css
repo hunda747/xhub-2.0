@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    display: grid;
+    padding: 4px;
+    
+}
+.navbar{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  
+}
+
+.btn-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+}
+#btnAdd{
+    display: grid;
+    background: rgb(9, 189, 9);
+    color: white;
+    width: fit-content;
+    place-items: right center;
+    margin-top: 3px;
+    padding: 4px;
+    margin-bottom: 4px;
+}
+/* .input-group{
+    display: flex;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 4px;
+    background: transparent;
+    color: black;
+    margin: 0;
+    margin-bottom: 3px;
+    padding: 0;
+    width: 100%;
+   
+} */
+.form-row input , .form-select{
+    width: 100%;
+    border-radius: 4px;
+    border: transparent;
+    border-bottom: solid 2px rgb(199, 94, 94);
+}
+.form-row input:hover , .form-select:hover{
+    border-left:0.3px solid  rgb(199, 94, 94);
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    color: black;
+    border-radius: 3px;
+    border: transparent;
+    border-bottom: solid 3px rgb(199, 94, 94);
+    margin-top: 7px;    
+}
+textarea:hover{
+    border-left: 0.3px solid rgb(199, 94, 94);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .row{
+    background: transparent;
+    border-radius: 20px;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    padding: 0px;
+    margin-top: 60px; 
+    
+} */
+
+.register-btn{
+    border: none;
+    outline: none;
+    background-color:  rgb(199, 94, 94);
+    border-radius: 8px;
+    width: 100% ;
+    height: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+     
+    
+}
+.register-btn:hover{
+    background:  rgb(240, 5, 5);
+    color: rgb(255, 255, 255);
+}
+/*
+#fname, #lname, #email,#confirm_email , #companyName{
+    width: 100%;
+    height: 20px;
+    border:none;
+    border-bottom: 2px solid black;
+}
+#description{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    height: 100px;
+}
+
+#fname:hover, #lname:hover, #email:hover,#companyName:hover , #description:hover , #confirm_email:hover{
+    border: solid 1px rgb(47, 222, 245);
+    transition:ease-in;
+    transition-delay: 0ms;
+} */
